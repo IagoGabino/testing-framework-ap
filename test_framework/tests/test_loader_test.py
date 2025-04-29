@@ -1,4 +1,4 @@
-from test_framework.core import TestCase, TestResult, TestLoader, TestSuite, TestRunner
+from test_framework.core import TestCase, TestLoader, TestSuite
 from test_framework.stubs import TestStub, TestSpy
 
 class TestLoaderTest(TestCase):
@@ -33,18 +33,3 @@ class TestLoaderTest(TestCase):
         loader = TestLoader()
         names = loader.get_test_case_names(Test)
         assert names == []
-    
-if __name__ == "__main__":
-    # parte 1 sem TestRunner
-    # result = TestResult()
-    # loader = TestLoader()
-    # suite = loader.make_suite(TestLoaderTest)
-    # suite.run(result)
-    # print(result.summary())
-
-    # parte 2 com TestRunner
-    loader = TestLoader()
-    suite = loader.make_suite(TestLoaderTest)
-
-    runner = TestRunner()
-    runner.run(suite)
