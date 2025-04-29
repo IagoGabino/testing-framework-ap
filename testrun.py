@@ -1,7 +1,7 @@
 from test_framework.core import TestCase
 from test_framework.core import TestResult
-from test_framework.tests import TestStub
-from test_framework.tests import TestSpy
+from test_framework.stubs import TestStub
+from test_framework.stubs import TestSpy
 from test_framework.core import TestSuite
 
 class TestCaseTest(TestCase):
