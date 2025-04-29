@@ -1,4 +1,5 @@
 from test_framework.core import TestCase
+from test_framework.core import TestResult
 
 class MyTest(TestCase):
     def set_up(self):
@@ -17,6 +18,8 @@ class MyTest(TestCase):
         print("test_c")
 
 if __name__ == "__main__":
+    result = TestResult()
     for method in ["test_a", "test_b", "test_c"]:
         test = MyTest(method)
-        test.run()
+        test.run(result)
+    print(result.summary())
